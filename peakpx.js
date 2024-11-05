@@ -13,7 +13,6 @@ async function peakpx(q) {
     const getHD = (await axios.get(random)).data
     const $$ = cheerio.load(getHD)
     const imgHD = $$('#fig > img').attr('src')
-    console.log(imgHD)
     return imgHD
   } catch (e) {
     return e.message
